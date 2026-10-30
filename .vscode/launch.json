@@ -1,0 +1,70 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "FUC: health",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/debug/fuc",
+      "args": [
+        "--config",
+        "config.local.yaml",
+        "health"
+      ],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build"
+    },
+    {
+      "name": "FUC: Keycloak login",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/debug/fuc",
+      "args": [
+        "--config",
+        "config.local.yaml",
+        "login"
+      ],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build"
+    },
+    {
+      "name": "FUC: artifacts",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/debug/fuc",
+      "args": [
+        "--config",
+        "config.local.yaml",
+        "artifacts",
+        "--page-size",
+        "20"
+      ],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build"
+    },
+    {
+      "name": "FUC: preview Kafka creation",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/debug/fuc",
+      "args": [
+        "kafka",
+        "create",
+        "orders",
+        "--chain",
+        "process-orders",
+        "--broker",
+        "kafka:9092",
+        "--topic",
+        "orders",
+        "--group",
+        "orders-workers",
+        "--max-concurrent",
+        "2",
+        "--dry-run"
+      ],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build"
+    }
+  ]
+}

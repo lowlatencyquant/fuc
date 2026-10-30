@@ -1,0 +1,5 @@
+/build/
+/config.local.yaml
+/config.*.local.yaml
+/.env
+.DS_Store

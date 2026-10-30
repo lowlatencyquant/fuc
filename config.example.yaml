@@ -1,0 +1,10 @@
+api_url: http://127.0.0.1:8081
+keycloak_url: http://127.0.0.1:8082
+realm: dataint
+client_id: fuc-cli
+username: dataint
+password: "s3cret-password"
+scope: openid
+verify_tls: true
+timeout_seconds: 30
+connect_timeout_seconds: 5
